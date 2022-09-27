@@ -23,7 +23,7 @@ public class MyLogger {
 	}
 	
 	@AfterThrowing(pointcut="@annotation(spring.core.ch02.ex04.Log)", throwing="ex")
-	public void logError(JoinPoint jp, Throwable ex) {
+	public void logError(JoinPoint jp, Throwable ex) { // 조인포인트가 실행 되었을 때 실행된다.
 		logger.error(jp.toLongString() + ": " + ex.getMessage());
 	}
 }

@@ -25,7 +25,7 @@ public class Timer {
 	}
 	
 	@AfterReturning(pointcut="bean(calc*)", returning="result") // joinpoint가 실행 성공 되었을 때 실행된다.
-	public void printResult(JoinPoint jp, int result) {
+	public void printResult(JoinPoint jp, int result) { // After보다 우선순위가 높다. 먼저 실행된다.
 		System.out.println(jp.toShortString() + ": " + result);
 	}
 }
