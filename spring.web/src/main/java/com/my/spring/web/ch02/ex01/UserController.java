@@ -29,7 +29,7 @@ public class UserController {
 		return "ch02/ex01/user"; // view만 return 한다. 모델은 안써도 view는 보내야 한다.
 	}
 	
-	@GetMapping("31")
+	@GetMapping("31") // 31이면 31.jsp라는 파일이 있어야 한다.
 	public void handler31(User user) { // 핸들러에 붙어 있는 url이 view Name이 된다.
 		user.setUserName("양승일"); // 파라미터 안에 클래스 이름의 소문자가 모델 이름이 된다.
 		user.setAge(31);
