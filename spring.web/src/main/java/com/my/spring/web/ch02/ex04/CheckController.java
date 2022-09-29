@@ -54,6 +54,6 @@ public class CheckController {
 	@PostMapping("checkbox")
 	public String checkbox(@RequestParam("fruit") List<String> fruits, Model fruit) {
 		fruit.addAttribute("fruits", fruits);
-		return "ch02/ex04/checkboxOut"; 
+		return "ch02/ex04/checkboxOut";
 	}
 }
