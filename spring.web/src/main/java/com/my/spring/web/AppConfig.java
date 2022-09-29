@@ -1,6 +1,7 @@
 package com.my.spring.web;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -10,5 +11,10 @@ public class AppConfig implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("ch01/main"); // main화면이다. contextPath가 /다. /WEB-INF/view/ch01/main.jsp를 return한다.
 //		registry.addViewController("ch02/ex03/user").setViewName("ch02/ex03/userIn");
+	}
+	
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("res/**").addResourceLocations("WEB-INF/res/"); // url이 res/** 이면 WEB-INF/res/ 로 url을 바꾼다. 
 	}
 }

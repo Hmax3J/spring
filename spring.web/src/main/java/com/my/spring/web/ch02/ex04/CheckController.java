@@ -49,6 +49,11 @@ public class CheckController {
 		System.out.println(fruits);
 		return "ch02/ex04/main"; // 처음엔 null을 주고 404에러가 뜨면 정상이다. 하나 하나 씩 쪼개서 개발을 해나간다.
 	}
+	
+	@PostMapping("checkbox")
+	public String checkbox(@RequestParam("fruit") @ModelAttribute("fruits") List<String> fruits) {  
+		return "ch02/ex04/checkboxOut"; // 이렇게 하면 값이 안 넘어간다. @RequestParam과 @ModelAttribute 는 궁합이 안 맞다. 
+	}
 	*/
 	
 	@PostMapping("checkbox")
