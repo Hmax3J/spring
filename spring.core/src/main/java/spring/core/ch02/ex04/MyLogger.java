@@ -17,7 +17,7 @@ public class MyLogger {
 		logger = LogManager.getLogger(MyLogger.class);
 	}
 	
-	@After("@annotation(spring.core.ch02.ex04.Log)") // annotation을 이용해서 joinpoint를 선언한다.
+	@After("@annotation(spring.core.ch02.ex04.Log)") // annotation을 이용해서 JoinPoint를 선언한다.
 	public void log(JoinPoint jp) {
 		logger.info(jp.toShortString()); // 작업 시작했다 끝났다 라는 메세지다. 정상 작동 할 때 나타내는 메세지다.
 	}
