@@ -1,8 +1,9 @@
 package com.my.spring.web.ch02.ex04;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,9 +43,17 @@ public class CheckController {
 		return "ch02/ex04/radioOut";
 	}
 	
+	/*
 	@PostMapping("checkbox")
-	public String checkbox(@RequestParam("fruit") ArrayList<String> fruits) {
+	public String checkbox(@RequestParam("fruit") List<String> fruits) { // ArrayList를 인식하지 못해서 RequestParam을 쓴다. 변수명과 넘어오는 값을 일치시킨다. RequestParam에 파라미터를 주면 매개변수 이름과 달라도 작동된다. 
 		System.out.println(fruits);
-		return checkbox(fruits);
+		return "ch02/ex04/main"; // 처음엔 null을 주고 404에러가 뜨면 정상이다. 하나 하나 씩 쪼개서 개발을 해나간다.
+	}
+	*/
+	
+	@PostMapping("checkbox")
+	public String checkbox(@RequestParam("fruit") List<String> fruits, Model fruit) {
+		fruit.addAttribute("fruits", fruits);
+		return "ch02/ex04/checkboxOut"; 
 	}
 }
