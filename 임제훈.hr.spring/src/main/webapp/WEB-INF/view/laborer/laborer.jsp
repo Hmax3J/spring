@@ -99,6 +99,7 @@ function init() {
         }
     })
 
+    // 노동자 삭제
     $('#delLaborerBtn').click(() => {
         if(isVal($('#laborerId:checked'))) {
             $('#modalMsg').text('노동자를 삭제하시겠습니까?')
