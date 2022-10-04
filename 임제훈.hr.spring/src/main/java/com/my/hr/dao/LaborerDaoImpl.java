@@ -18,11 +18,6 @@ public class LaborerDaoImpl implements LaborerDao {
 	}
 
 	@Override
-	public Laborer selectLaborer(int laborerId) {
-		return laborerMap.selectLaborer(laborerId);
-	}
-
-	@Override
 	public void insertLaborer(Laborer laborer) {
 		laborerMap.insertLaborer(laborer);
 	}
