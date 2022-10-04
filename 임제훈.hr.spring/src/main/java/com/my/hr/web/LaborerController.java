@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.my.hr.domain.Laborer;
 import com.my.hr.service.LaborerService;
 
-@RestController("web.userController")
+@RestController("web.laborerController")
 @RequestMapping("laborer")
 public class LaborerController {
 	@Autowired private LaborerService laborerService;
