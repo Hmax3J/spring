@@ -111,7 +111,6 @@ function init() {
         $.ajax({
         	url: 'laborer/del/' + $('#laborerId').val(),
         	method: 'delete',
-        	data: {laborerId: $('#laborerId:checked').val()},
         	success: listLaborers
         })
         $('#modal').modal('hide')
