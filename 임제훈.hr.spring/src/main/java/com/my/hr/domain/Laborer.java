@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class Laborer {
 	private int laborerId;
-	private String name;
+	private String laborerName;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	@JsonFormat(pattern="yyyy-MM-dd", timezone="Asia/Seoul")
 	private LocalDate hireDate;
